@@ -21,3 +21,7 @@ insert into vehicule (matricule, nb_places, status) values ('1923TUN', 16, false
 insert into vehicule (matricule, nb_places, status) values ('1872TIZ', 16, false);
 insert into vehicule (matricule, nb_places, status) values ('9128TOL', 16, true);
 insert into vehicule (matricule, nb_places, status) values ('0025TJE', 16, true);
+insert into vehicule (matricule, nb_places, status) values ('9231TNU', 16, false);
+insert into vehicule (matricule, nb_places, status) values ('2178TZI', 10, false);
+insert into vehicule (matricule, nb_places, status) values ('8129TLO', 10, true);
+insert into vehicule (matricule, nb_places, status) values ('0520TEJ', 16, true);
