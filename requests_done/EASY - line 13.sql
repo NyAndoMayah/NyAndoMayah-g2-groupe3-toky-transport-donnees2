@@ -1,0 +1,2 @@
+-- afficher toutes les reservation sur un voyage.
+select * from reserver inner join voyage on voyage.id_voyage = reserver.id_voyage inner join ville on ville.id_ville = voyage.id_ville_arrivee where ville.nom_ville = 'Antsirabe';
