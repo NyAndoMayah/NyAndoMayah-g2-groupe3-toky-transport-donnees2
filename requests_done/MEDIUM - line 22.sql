@@ -1,0 +1,2 @@
+-- liste des reservations en une journée/semaine/mois
+select nom, prenom, nom_ville, place, date_reservation from client inner join reserver on client.id_client = reserver.id_client inner join voyage on reserver.id_voyage = voyage.id_voyage inner join ville on voyage.id_ville_arrivee = ville.id_ville;

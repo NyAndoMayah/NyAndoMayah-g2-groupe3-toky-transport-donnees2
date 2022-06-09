@@ -1,0 +1,2 @@
+-- afficher le nom des villes de destinations, les offres liés avec avec leur tarif.
+select nom_ville,tarif,label from ville inner join voyage on ville.id_ville = voyage.id_voyage inner join offre on offre.id_offre = voyage.id_offre;

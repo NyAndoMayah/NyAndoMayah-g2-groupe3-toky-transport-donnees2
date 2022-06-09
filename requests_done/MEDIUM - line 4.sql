@@ -1,0 +1,2 @@
+-- tous les véhicules qui ont participé à un voyage à une date précise.
+select * from vehicule inner join voyage on vehicule.id_vehicule = voyage.id_vehicule where voyage.date_voyage = '12/01/2022' and vehicule.status = 'true';
