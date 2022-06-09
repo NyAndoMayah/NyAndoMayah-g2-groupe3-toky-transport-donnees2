@@ -1,0 +1,2 @@
+-- lister les vehicule qui part a un certain moment
+select vehicule.id_vehicule, matricule, heure_dep from vehicule inner join voyage on voyage.id_vehicule = vehicule.id_vehicule where vehicule.status = 'true' and voyage.date_dep = '07/01/2022';
