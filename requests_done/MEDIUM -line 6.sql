@@ -1,0 +1,2 @@
+-- Quand est ce que tel ou tel client a réservé
+select date_reservation from reserver inner join client on reserver.id_client = client.id_client where client.nom = 'Gentile' and client.prenom = 'Cathy';
