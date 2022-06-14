@@ -67,14 +67,16 @@ SELECT sum( montant_paye) FROM reserver WHERE date_reservation BETWEEN current_d
 SELECT sum( montant_paye) FROM reserver WHERE date_reservation BETWEEN current_date = interval '12 month ' AND current_date;
 
 --dépense d'un vehicule pendant un delai détèrminer MEDIUM 31
-SELECT sum(essence,maintenance), matricule FROM vehicule INNER JOIN recevoir ON vehicule.id_vehicule = recevoir.id_vehicule
-INNER JOIN depense ON depense.id_depense = recevoir.id_depense WHERE id_vehicule = 10;
+SELECT sum(essence+maintenance) FROM vehicule INNER JOIN recevoir ON vehicule.id_vehicule = recevoir.id_vehicule
+INNER JOIN depense ON depense.id_depense = recevoir.id_depense
+INNER JOIN voyage ON vehicule.id_vehicule = voyage.id_vehicule
+WHERE vehicule.id_vehicule = 10 AND date_voyage BETWEEN '10-01-22' AND current_date;
 
 -- nombre de passagers ne faisnat que la moitier des voyages MEDIUM 30
 SELECT count(nom) FROM client INNER JOIN reserver ON client.id_client = reserver.id_client 
 INNER JOIN voyage ON reserver.id_voyage = voyage.id_voyage
 INNER JOIN offre ON offre.id_offre = voyage.id_offre 
-WHERE montant_paye = tarif AND date_voyage = current_date;
+WHERE montant_paye = tarif/2 AND date_voyage = current_date;
 
 --calcul du total d'argent entre 2 dates MEDIUM 29
 SELECT sum( montant_paye)  FROM reserver WHERE date_reservation BETWEEN '10-11-2021' AND current_date;
