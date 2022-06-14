@@ -56,15 +56,3 @@ SELECT montant_paye,nom,prenom FROM client INNER JOIN reserver ON client.id_clie
 INNER JOIN voyage ON reserver.id_voyage = voyage.id_voyage
 INNER JOIN offre ON offre.id_offre = voyage.id_offre 
 WHERE montant_paye = tarif AND date_voyage >= date_reservation;
-
---revenus journaliérs MEDIUM/HARD 15
-
---revenu mensuels MEDIUM/HARD 15
-
---revenu annuels MEDIUM/HARD 15
-
---dépense d'un vehicule pendant un delai détèrminer MEDIUM 31
-
--- nombre de passagers ne faisnat que la moitier des voyages MEDIUM 30
-
---calcul du total d'argent entre 2 dates MEDIUM 29
