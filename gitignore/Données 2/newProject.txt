@@ -1,0 +1,16 @@
+Voiture :prem 10 places - lite 16, matricule
+Different type de de voiture, (8 type de voiture actuelle), heure de depart
+Chauffeurs alternés (plusieurs) (email, nomn, prenom, CIN, tel)
+Clients (---------------------------//--------------------------)
+Revenu mensuel(gains par ville, bilan, revenu au colis,)
+Destination (Tarifs (), tana,antsirabe, fianarantsoa, tamatave, diego, morondava)
+Lite
+30000 (tana - fianara)
+15000 (antsirabe)
+40000(morondava)
+30000 (tamatave)
+35000 (diego)
+premium + 10000
+
+--------------------------------//-----------------------------
+c

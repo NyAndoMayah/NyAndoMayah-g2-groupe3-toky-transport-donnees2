@@ -1,0 +1,17 @@
+Exercice : 
+	Créez une base de données appelé "FILMS".
+	Créez y une table appelée "film", avec les colonnes suivantes:
+		-code : un entier qui sert à identifier un film
+			(primary key);
+		-titre;
+		-année de sortie;
+		-description;
+		-note: un entier variant de 0 à 10;
+		-genre: drama | horreur | romantique | comédie ..
+	Affichez tous les films triés par note décroissantes.
+
+correction :
+-- Créer une base de données:
+	-create database films;
+-- Connexion à la base de données
+	-\c films

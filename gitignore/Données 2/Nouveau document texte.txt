@@ -1,0 +1,80 @@
+QGBD
+
+Définition
+Base de données : Ensemble de données accessibles et exploitables à travers un ensemble de programmes
+SGBD : outil/logiciel permettant d'accéder et de manipuler les bases de données.
+
+
+Typologies
+	- Non-structurées (dites NoSQL) : MongoDB,CouchDB,Elasticsearch
+	- Structurées (dites relationnelles) : Oracle, Postgresql, Mysql, Sqlite (misy relation le table)
+
+Pourquoi des BD?
+Sécurité
+Gros volume de données
+Cohérence et manipulation
+Redondance
+
+Language
+SQL : Un standard de l'ISO pour manipuler une BD rationnelle
+
+Architecture
+Serveurs (ex: localhost:5432)
+Base de données
+Tables (pour chaque BD)
+
+Formes table :
+	-Colonnes = attribut
+	-Lignes = enregistrement
+
+PostgreSQL
+	-Une implémentation de SQL sur un moteur appelé Postgre
+	-Interface graphique via pgAdmin
+	-En service depuis plus de 30ans
+	-Un SGBD relationnel-objet
+	-Considéré par beaucoup comme étant le plus avancé des SGBDR gratuits
+
+LDD : Langage de définition des données
+	-Créer une base de données (CREATE DATABASE)
+	-Se connecter sur une (autre) base de données
+	-Créer une table (CREATE TABLE)
+	-Modifier la structure d'une table (ALTER TABLE)
+		Add column
+		Drop column
+		Add constraint
+	-Effacer une table (DROP TABLE) ou une base de données (DROP DATABASE)
+
+
+Language :
+création de BD
+	create database "hei" : créer BD hei
+	\l : liste
+	\c "hei" : connecter au BD hei
+	create table : créer un tableau (nom,caractères,contrainte)
+	exemple : 	
+		create table student(
+		std varchar(9) primary key,
+		nom varchar(125) not null,
+		date_naissance date not null,
+		adress text
+		);
+
+	exemple de type :
+	varchar : taille max 255, exemple "Lorem ipsum"
+	char : taille max 1, "a"
+	int : 10
+	float : taille max 17.55, 17.55
+	date : "aaa,mmm,jjj"
+	time : "hh:mm:ss"
+	timestamp: date time
+	text,enum : taille max ..., ...(google is your firend)...
+
+Opération dans un BD
+	INSERT INTO tableName(col1,col2,...)VALUES(...,...,...)
+		Mampiditra enregistrement vaovao (cologne)
+	UPDATE tableName SET column = newValue
+		Manova colonne
+	DELETE FROM tableName WHERE ...
+		mamafa
+	SELECT column(s) FROM table WHERE...ORDER BY...ASC|DESC
+		misafidy na mtrier
