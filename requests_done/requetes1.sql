@@ -30,6 +30,5 @@ ON client.id_client = reserver.id_client;
 SELECT nom,prenom,offre.label FROM client INNER JOIN offre
 ON client.id_client = offre.id_offre;
 
--- Le nombre de mineur qui participe a un voyage
-SELECT COUNT (id_client) FROM client WHERE cin like '%null%';
+
 
