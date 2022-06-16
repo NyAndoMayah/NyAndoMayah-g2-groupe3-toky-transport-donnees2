@@ -1,2 +1,7 @@
 -- liste des voyages et leurs destinations
-select date_voyage, heure_dep , nom_ville from voyage inner join ville on ville.id_ville = voyage.id_ville_arrivee;
+SELECT date_voyage, heure_dep , V1.nom_ville as depart, V2.nom_ville as arrivee
+FROM voyage 
+INNER JOIN ville 
+as V1 ON V1.id_ville = voyage.id_ville_depart
+INNER JOIN ville
+as V2 ON V2.id_ville = voyage.id_ville_arrivee;
