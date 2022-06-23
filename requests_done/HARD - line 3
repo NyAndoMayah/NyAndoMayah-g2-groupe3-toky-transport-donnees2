@@ -9,4 +9,5 @@ INNER JOIN ville
 AS v2 ON v2.id_ville = voyage.id_ville_arrivee
 INNER JOIN offre
 ON voyage.id_offre = offre.id_offre
-where nb_place_dispo>0;
+where nb_place_dispo>0 
+and (v1.nom_ville = 'Antananarivo' and v2.nom_ville = 'Fianarantsoa');
